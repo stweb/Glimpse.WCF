@@ -4,11 +4,16 @@
 A plugin to track WCF calls in Glimpse and show them on the timeline.
 The requests are captured via GlimpseWcfClientInspector which implements IClientMessageInspector.
 
+[![Build status](https://ci.appveyor.com/api/projects/status/lgwb2hkcvyohvfdf)](https://ci.appveyor.com/project/stweb/glimpse-wcf)
+
 Usage
 =====
 
 - Reference Glimpse.WCF and its dependencies (from NuGet)
-- Register WCF Behaviour
+- Register WCF Behaviour via code
+
+    using Glimpse.Wcf;
+	clientRuntime.MessageInspectors.Add(new GlimpseWcfClientInspector());
 
 Reference
 =========
